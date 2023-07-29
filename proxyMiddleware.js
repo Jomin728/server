@@ -5,6 +5,11 @@ module.exports = function addProxyMiddleware(app) {
       createProxyMiddleware({
         target: 'https://englishapi.pinkvilla.com/app-api/v1/photo-gallery-feed-page/page/1',
         changeOrigin: true,
+        pathRewrite: {
+            '/1':'/1',
+            '/2':'/2',
+            '/3':'/3'
+        }
       }),
     );
   };
