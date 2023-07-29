@@ -1,9 +1,9 @@
 const { createProxyMiddleware } = require('http-proxy-middleware');
 module.exports = function addProxyMiddleware(app) {
     app.use(
-      '/api',
+      '/',
       createProxyMiddleware({
-        target: 'https://api.binance.com',
+        target: 'https://englishapi.pinkvilla.com/app-api/v1/photo-gallery-feed-page/page/1',
         changeOrigin: true,
       }),
     );
