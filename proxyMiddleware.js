@@ -6,9 +6,13 @@ module.exports = function addProxyMiddleware(app) {
         target: 'https://englishapi.pinkvilla.com/app-api/v1/photo-gallery-feed-page/page/1',
         changeOrigin: true,
         router: function(req) {
-            console.log(req.url)
-            let string="https://englishapi.pinkvilla.com/app-api/v1/photo-gallery-feed-page/page"
-            console.log(string+req.url)
+          debugger
+            // console.log(req)
+            console.log(req.headers)
+            console.log(req.query)
+            let string=""
+            if(req.url!=null)
+            console.log(string+req.url.slice(1))
             return string;
         }
       }),
